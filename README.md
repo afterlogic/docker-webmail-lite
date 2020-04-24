@@ -1,9 +1,9 @@
 afterlogic/docker-webmail-lite
 ==============================
 
-Out-of-the-box [AfterLogic WebMail Lite](http://www.afterlogic.org/webmail-lite) image
+Out-of-the-box [Afterlogic WebMail Lite](https://afterlogic.org/webmail-lite) image
 
-Includes Apache, MySQL and PHP setup based on [tutum/lamp package](https://github.com/tutumcloud/lamp)
+Includes Apache, MySQL and PHP setup based on [fauria/docker-lamp package](https://github.com/fauria/docker-lamp)
 
 
 Creating the image
@@ -29,12 +29,12 @@ Alternately, you can use any other port available, e.g. 800:
 and access the installation at http://localhost:800/
 
 
-Accessing AdminPanel Interface
+Accessing admin interface
 ------------------------------
 
-To configure WebMail Lite installation, log into AdminPanel interface using URL like http://localhost/adminpanel/
+To configure WebMail Lite installation, log into admin interface using main WebMail URL.
 
-Default credentials are set to **mailadm** / **12345**
+Default credentials are **superadmin** login and empty password.
 
 
 Licensing Terms & Conditions

@@ -1,22 +1,16 @@
-<?php
-include_once '/var/www/html/libraries/afterlogic/api.php';
+<?php 
+include_once '/var/www/html/system/autoload.php';
+\Aurora\System\Api::Init(true);
 
-if (CApi::IsValid())
+$oSettings = \Aurora\System\Api::GetSettings();
+if ($oSettings)
 {
-  $settings = & CApi::GetSettings();
-  if ($settings)
-  {
-    $settings->SetConf('Common/DBHost', 'localhost');
-    $settings->SetConf('Common/DBName', 'afterlogic');
-    $settings->SetConf('Common/DBLogin', 'root');
-    $settings->SetConf('Common/DBPassword', 'webbundle');
-
-    CDbCreator::ClearStatic();
-    CDbCreator::CreateConnector($settings);
-
-    $oApiDbManager = CApi::Manager('db');
-    $oApiDbManager->SyncTables();
-
-    $settings->SaveToXml();
-  }
+	$oSettings->SetConf('DBHost', 'localhost');
+	$oSettings->SetConf('DBName', 'afterlogic');
+	$oSettings->SetConf('DBLogin', 'rootuser');
+	$oSettings->SetConf('DBPassword', 'dockerbundle');
+	$result = $oSettings->Save();
+	
+	\Aurora\System\Api::GetModuleDecorator('Core')->CreateTables();
+	\Aurora\System\Api::GetModuleManager()->SyncModulesConfigs();
 }
