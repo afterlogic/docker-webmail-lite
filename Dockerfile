@@ -49,6 +49,7 @@ RUN rm -rf /var/www/html && \
 RUN rm -f /var/www/html/afterlogic.php
 COPY afterlogic.php /var/www/html/afterlogic.php
 RUN rm -rf /tmp/alwm
+RUN rm -rf /var/lib/mysql/ && mkdir -p /var/lib/mysql
 
 VOLUME ["/var/www/html", "/var/log/httpd", "/var/lib/mysql", "/var/log/mysql", "/etc/apache2"]
 
