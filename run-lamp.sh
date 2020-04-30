@@ -11,6 +11,8 @@ function exportBoolean {
 exportBoolean LOG_STDOUT
 exportBoolean LOG_STDERR
 
+VOLUME_HOME="/var/lib/mysql"
+
 if [ $LOG_STDERR ]; then
     /bin/ln -sf /dev/stderr /var/log/apache2/error.log
 else
