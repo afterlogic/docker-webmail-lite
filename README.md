@@ -3,7 +3,7 @@ afterlogic/docker-webmail-lite
 
 Out-of-the-box [Afterlogic WebMail Lite](https://afterlogic.org/webmail-lite) image
 
-Includes Apache, MySQL and PHP setup based on [fauria/docker-lamp package](https://github.com/fauria/docker-lamp)
+Includes Apache, MySQL and PHP setup based on [fauria/docker-lamp package](https://github.com/fauria/docker-lamp). Contains improvements [offered for Aurora Files](https://github.com/extbe)
 
 
 Creating the image
@@ -32,10 +32,15 @@ and access the installation at http://localhost:800/
 Accessing admin interface
 ------------------------------
 
-To configure WebMail Lite installation, log into admin interface using main WebMail URL.
+To configure WebMail Lite installation, log into admin interface using main installation URL and `/adminpanel` path.
 
 Default credentials are **superadmin** login and empty password.
 
+Overriding configuration
+------------------------------
+
+To override WebMail Lite configuration, put config files with overrides into `data/settings/` or 
+`data/settings/modules/`. The file names must be the same as the ones you want to override.
 
 Licensing Terms & Conditions
 ----------------------------
