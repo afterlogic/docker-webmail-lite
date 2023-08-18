@@ -17,6 +17,8 @@ RUN apk --no-cache add php81 \
 	php81-xml \
 	php81-gd \
 	php81-zip \
+	php81-xmlwriter \
+	php81-xmlreader \
 	nginx supervisor curl tzdata mysql-client
 
 COPY config/nginx.conf /etc/nginx/nginx.conf
