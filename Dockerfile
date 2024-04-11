@@ -16,6 +16,7 @@ RUN apk --no-cache add php81 \
 	php81-dom \
 	php81-xml \
 	php81-gd \
+	php81-exif \
 	php81-zip \
 	php81-xmlwriter \
 	php81-xmlreader \
@@ -37,7 +38,7 @@ WORKDIR /var/www/html
 RUN wget -P /tmp https://afterlogic.org/download/webmail_php.zip
 RUN unzip -qq /tmp/webmail_php.zip -d /var/www/html
 COPY afterlogic.php /var/www/html/afterlogic.php
-RUN chown -R nobody.nobody /var/www/html
+RUN chown -R nobody.nobody /var/www/html/data
 USER nobody
 RUN php81 /var/www/html/afterlogic.php
 EXPOSE 80
