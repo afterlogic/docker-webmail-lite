@@ -3,8 +3,6 @@ afterlogic/docker-webmail-lite
 
 [Afterlogic WebMail Lite](https://afterlogic.org/webmail-lite) image for Docker using Nginx, PHP-FPM 8.1, MySQL on Alpine Linux. Loosely based on [khromov/alpine-nginx-php8 package](https://github.com/khromov/alpine-nginx-php8).
 
-If you require a legacy image that uses Ubuntu and Apache, you can find it at: [afterlogic/docker-webmail-lite-legacy](https://hub.docker.com/repository/docker/afterlogic/docker-webmail-lite-legacy)
-
 Getting the image
 -----------------
 
