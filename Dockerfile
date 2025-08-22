@@ -20,6 +20,7 @@ RUN apk --no-cache add php83 \
 	php83-zip \
 	php83-xmlwriter \
 	php83-xmlreader \
+	php83-session \
 	nginx supervisor curl tzdata mysql-client
 
 COPY config/nginx.conf /etc/nginx/nginx.conf
