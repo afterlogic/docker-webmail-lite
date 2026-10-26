@@ -5,10 +5,10 @@ include_once '/var/www/html/system/autoload.php';
 $oSettings = \Aurora\System\Api::GetSettings();
 if ($oSettings)
 {
-	$oSettings->SetConf('DBHost', 'db:3306');
-	$oSettings->SetConf('DBName', 'afterlogic');
-	$oSettings->SetConf('DBLogin', 'afterlogic');
-	$oSettings->SetConf('DBPassword', 'docker_Bundle');
+	$oSettings->SetValue('DBHost', 'db:3306');
+	$oSettings->SetValue('DBName', 'afterlogic');
+	$oSettings->SetValue('DBLogin', 'afterlogic');
+	$oSettings->SetValue('DBPassword', 'docker_Bundle');
 	$oSettings->Save();
 
 	\Aurora\System\Api::GetModuleManager()->SyncModulesConfigs();
